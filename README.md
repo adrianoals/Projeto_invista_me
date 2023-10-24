@@ -1,3 +1,3 @@
 # projeto_invista_me
 
-Utilizando o ORM,  
+Utilizando o ORM.
