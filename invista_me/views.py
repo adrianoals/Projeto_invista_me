@@ -4,14 +4,12 @@ from django.shortcuts import HttpResponse
 def pagina_inicial(request):
     return HttpResponse('Pronto para investir!')
 
-def contato(request):
-    return HttpResponse('Para dúvidas enviar um e-mail para contato@suporte.com')
+def novo_investimento(request):
+    return render(request, 'investimentos/novo_investimento.html')
 
-def minha_historia(request):
-    pessoa = {
-        'nome': 'Jeff', 
-        'idade': 28, 
-        'hobby': 'Games'
+def investimento_registrado(request):
+    investimento = {
+        'tipo_investimento': request.POST.get('TipoInvestimento')
     }
-    return render(request, 'investimentos/minha_historia.html', pessoa)
-
+    return render(request, 'investimentos/investimento_registrado.html', investimento)
+ 
