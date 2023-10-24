@@ -1,3 +1,3 @@
 # projeto_invista_me
 
-Branch do ínicio de dados dinâmicos. 
+Passando dados da página para o servidor sem usar um BD.
