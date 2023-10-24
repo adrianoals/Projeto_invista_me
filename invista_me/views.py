@@ -8,5 +8,10 @@ def contato(request):
     return HttpResponse('Para dúvidas enviar um e-mail para contato@suporte.com')
 
 def minha_historia(request):
-    return render(request, 'investimentos/minha_historia.html')
+    pessoa = {
+        'nome': 'Jeff', 
+        'idade': 28, 
+        'hobby': 'Games'
+    }
+    return render(request, 'investimentos/minha_historia.html', pessoa)
 
