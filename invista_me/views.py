@@ -11,3 +11,5 @@ def investimentos(request):
     }
     return render(request, 'investimentos/investimentos.html', context=dados)
 
+def detalhes(request):
+    
