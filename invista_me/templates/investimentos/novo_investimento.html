@@ -7,10 +7,10 @@
 </head>
 <body>
     <div>
-        <form action="{% url 'investimento_registrado' %}" method="post">
+        <form action="" method="post">
             {% csrf_token %}
-            <label for="">Tipo de Investimento</label>
-            <input type="text" name="TipoInvestimento">
+            <h1>Formulario Novo investimento</h1>
+            {{formulario}}
             <button type="submit">Salvar</button>
         </form>
     </div>

@@ -7,22 +7,22 @@
 </head>
 <body>
     <div>
-        <h1>Listagem de Investimento</h1>
-        <button><a href="{% url 'novo_investimento' %}">Novo Investimento</a></button>
+        <h1>Detalhe do Investimento</h1>
         <table>
             <tr>
                 <th>Id</th>
                 <th>Investimento</th>
                 <th>Valor</th>
+                <th>Data</th>
+                <th>Pago</th>
             </tr>
-            {% for dado in dados %}
             <tr>
-                <td>{{dado.id}}</td>
-                <td>{{dado.investimento}}</td>
-                <td>{{dado.valor}}</td>
-                <td><button><a href="{% url 'detalhe' dado.id %}">Detalhe</a></button></td>
+                <td>{{dados.id}}</td>
+                <td>{{dados.investimento}}</td>
+                <td>{{dados.valor}}</td>
+                <td>{{dados.data}}</td>
+                <td>{{dados.pago}}</td>
             </tr>
-            {% endfor %}
         </table>
     </div>
 </body>
