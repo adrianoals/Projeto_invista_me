@@ -13,3 +13,6 @@ def investimento_registrado(request):
     }
     return render(request, 'investimentos/investimento_registrado.html', investimento)
  
+# def investimento(request):
+#     return render(request, 'investimento/investimentos.html')
+
