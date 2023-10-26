@@ -27,3 +27,17 @@ def criar(request):
         }
         return render(request, 'investimentos/novo_investimento.html', context=formulario)
 
+def editar(request, id_investimento):
+    investimento = Investimento.objects.get(pk=id_investimento)
+    if request.method == 'GET':
+        formulario = InvestimentoForm(instance=investimento)
+        return render(request, 'investimentos/novo_investimento.html', {'formulario': formulario})
+    # Novo_investimento -> POST
+    else:
+        formulario = InvestimentoForm(request.POST, instance=investimento)
+        if formulario.is_valid():
+            formulario.save()
+        return redirect('investimentos')
+
+
+
