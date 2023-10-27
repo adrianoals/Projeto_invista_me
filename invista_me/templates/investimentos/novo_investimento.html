@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <form action="" method="post">
-            {% csrf_token %}
-            <h1>Formulario Novo investimento</h1>
-            {{formulario}}
-            <button type="submit">Salvar</button>
-        </form>
-    </div>
-</body>
-</html>
+{% extends "investimentos/base.html" %}
+{% block conteudo%}
+{% load crispy_forms_tags  %}
+<div class='container'>
+    <h1>Formulario Novo investimento</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{formulario | crispy}}
+        <button type="submit" class='btn btn-success'>Salvar</button>
+    </form>
+</div>
+{% endblock %}
