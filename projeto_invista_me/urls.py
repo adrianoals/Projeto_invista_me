@@ -21,8 +21,10 @@ from invista_me import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.pagina_inicial),
-    path('contato', views.contato, name='contato'),
-    path('minha_historia', views.minha_historia, name='minha_historia'),
+    path('', views.investimentos, name='investimentos'),
+    path('novo_investimento', views.criar, name='novo_investimento'),
+    path('novo_investimento/<int:id_investimento>', views.editar, name='editar'),
+    path('excluir_investimento/<int:id_investimento>', views.excluir, name='excluir'),
+    path('<int:id_investimento>', views.detalhe, name='detalhe'),
 ]
 
